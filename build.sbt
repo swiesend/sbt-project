@@ -12,8 +12,18 @@ lazy val commonSettings = Seq(
   name := conf.getString("app.name"),
   organization := conf.getString("app.organization"),
   version := conf.getString("app.version"),
-  scalaVersion := "2.11.4"
-  /*scalacOptions += "-target:jvm-1.7"*/
+  scalaVersion := "2.11.6",
+  /*scalacOptions += "-target:jvm-1.7",*/  
+  target <<= baseDirectory / "target",
+  sourceDirectory in Compile <<= baseDirectory / "app",
+  sourceDirectory in Test <<= baseDirectory / "test",
+  /*confDirectory <<= baseDirectory / "conf",*/
+  resourceDirectory in Compile <<= baseDirectory / "conf",
+  scalaSource in Compile <<= baseDirectory / "app",
+  scalaSource in Test <<= baseDirectory / "test",
+  javaSource in Compile <<= baseDirectory / "app",
+  javaSource in Test <<= baseDirectory / "test"
+  /*distDirectory <<= baseDirectory / "dist"*/
 )
 
 lazy val root = (project in file(".")).settings(commonSettings: _*)
@@ -34,13 +44,15 @@ libraryDependencies ++= Seq(
   "org.scalatest" % "scalatest_2.11" % "2.2.4",
   "com.typesafe" % "config" % "1.3.0-M2",
   "com.typesafe.akka" % "akka-actor_2.11" % "2.3.9",
-  "com.typesafe.slick" % "slick_2.11" % "3.0.0-RC3"
+  "com.typesafe.slick" % "slick_2.11" % "3.0.0-RC3",
 //  "com.typesafe.play" % "play_2.11" % "2.3.8"
+  "com.h2database" % "h2" % "1.4.187",
+  "mysql" % "mysql-connector-java" % "5.1.35"
 )
 
 //////////////////////////////
 // Eclipse settings
 
 // download available sources and javadocs
-// and make them accessible in Eclipse 
+// and make them auto-accessible in Eclipse 
 EclipseKeys.withSource := true

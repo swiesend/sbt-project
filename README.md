@@ -1,13 +1,13 @@
 # sbt-project
 
-This is a basic sbt project with **preconfigured dependencies** for:
+This is a basic sbt template project with **preconfigured dependencies** for:
 
 * [Logback](http://logback.qos.ch/)
 * [ScalaTest](http://www.scalatest.org/)
 * [Config](https://github.com/typesafehub/config)
 * [Akka actors](http://akka.io/)
-* [Play](https://www.playframework.com/)
 * [Slick](http://slick.typesafe.com/)
+* [Play](https://www.playframework.com/)
 
 local **sbt plugins** support for:
 
@@ -15,20 +15,14 @@ local **sbt plugins** support for:
 * [IntelliJ](https://github.com/mpeltonen/sbt-idea)
 * [Play](https://www.playframework.com/)
 
-
 ## Source code
 
-The source code is the at standard location for sbt */src/main* and */src/test*. If you add Play nature the sources are changing to */app* and */test*.
+The source code is placed in *./app* and *./test* like in play.
 
 ## Configuration File
 
-The *application.conf* is located to *./conf* and not to */src/main/resources*. 
+The *application.conf* is located to *./conf* like in play. 
 
-## Logback configuration
+## Logback Configuration
 
-The *logback.xml*is located to */src/main/resources*.
-
-
-
-
-
+The *logback.xml* is also located to *./conf* like in play.

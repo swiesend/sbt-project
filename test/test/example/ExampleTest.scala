@@ -1,7 +1,6 @@
-package example
+package test.example
 
-import org.scalatest.BaseFun
-import org.scalatest.BaseSpec
+import test._
 
 class FunctionTest extends BaseFun {
 
