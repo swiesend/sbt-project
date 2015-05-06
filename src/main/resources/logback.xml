@@ -1,5 +1,5 @@
-<!--<configuration debug="true">-->
-<configuration>
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration> -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} TKD [%thread] %-5level %logger{36} - %msg%n</pattern>
@@ -7,18 +7,18 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>/tmp/test.log</file>
+        <file>log/file.log</file>
         <append>true</append>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} TKD [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
-    </appender>
-
-    <root level="debug">
+    </appender>    
+    
+    <logger name="akka" level="DEBUG" />
+    
+    <root level="DEBUG">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>
-    
-    <!-- sends logs to logback-beagle for eclipse -->
-    <!-- <consolePlugin /> -->
+
 </configuration>

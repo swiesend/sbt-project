@@ -28,6 +28,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.exe
 
 # Windows shortcuts
 *.lnk
@@ -70,6 +71,9 @@ lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+project/target/
+project/project/
+
 
 # Scala-IDE specific
 .scala_dependencies
@@ -178,3 +182,6 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
+
+### Custom ###
+log/
