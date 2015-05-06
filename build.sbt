@@ -10,7 +10,7 @@ lazy val commonSettings = Seq(
     name := conf.getString("app.name"),
     organization := conf.getString("app.organization"),
     version := conf.getString("app.version"),
-    mainClass in Compile := Some("controllers.Application"),
+    mainClass in Compile := Some("controller.Application"),
     //  scalacOptions += "-target:jvm-1.7",
     scalaVersion := "2.11.6"
 )
