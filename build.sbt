@@ -22,6 +22,8 @@ lazy val pathSettings = Seq(
 lazy val root = (project in file("."))
   .settings(commonSettings: _*)
   .settings(pathSettings: _*)
+// https://www.playframework.com/documentation/2.4.x/NewApplication#Create-a-new-application-without-Activator
+// .enablePlugins(PlayScala)
 
 
 //
@@ -33,11 +35,11 @@ libraryDependencies ++= Seq(
     // groupID % otherID_2.11 % otherRevision
     // groupID %% otherID % otherRevision
     "ch.qos.logback" % "logback-classic" % "1.1.3",
-    "org.scalatest" %% "scalatest" % "2.2.4",
-    "com.typesafe" % "config" % "1.3.0-M2",
-    "com.typesafe.akka" %% "akka-actor" % "2.3.10",
-    "com.typesafe.akka" %% "akka-testkit" % "2.3.10",
-    "com.typesafe.akka" %% "akka-slf4j" % "2.3.10",
+    "org.scalatest" %% "scalatest" % "2.2.5",
+    "com.typesafe" % "config" % "1.3.0",
+    "com.typesafe.akka" %% "akka-actor" % "2.3.11",
+    "com.typesafe.akka" %% "akka-testkit" % "2.3.11",
+    "com.typesafe.akka" %% "akka-slf4j" % "2.3.11",
     "com.typesafe.slick" %% "slick" % "3.0.0",
     "com.h2database" % "h2" % "1.4.187",
     "mysql" % "mysql-connector-java" % "5.1.35"

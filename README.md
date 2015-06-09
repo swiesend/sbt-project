@@ -12,5 +12,7 @@ local **sbt plugins** support for:
 
 * [Eclipse](https://github.com/typesafehub/sbteclipse)
 * [IntelliJ](https://github.com/mpeltonen/sbt-idea)
+* [Assembly](https://github.com/sbt/sbt-assembly)
+* [Play](https://www.playframework.com/documentation/2.4.x/NewApplication#Create-a-new-application-without-Activator)
 
 and some examples how to use the libs.
