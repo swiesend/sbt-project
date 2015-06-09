@@ -8,7 +8,7 @@ This is a basic sbt template project with **preconfigured dependencies** for:
 * [Akka - Actors and Futures](http://akka.io/)
 * [Slick 3.0](http://slick.typesafe.com/)
 
-local **sbt plugins** support for:
+local **sbt plugins** support for sbt version `0.13.8`:
 
 * [Eclipse](https://github.com/typesafehub/sbteclipse)
 * [IntelliJ](https://github.com/mpeltonen/sbt-idea)
