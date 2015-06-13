@@ -185,3 +185,5 @@ crashlytics-build.properties
 
 ### Custom ###
 log/
+logs/
+# *.conf

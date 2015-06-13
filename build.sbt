@@ -1,9 +1,11 @@
 import com.typesafe.config._
 
+
 //
 // Settings
 //
 
+// load configuration file to obtain from there some values
 val conf = ConfigFactory.parseFile(new File("src/main/resources/application.conf")).resolve()
 
 lazy val commonSettings = Seq(
@@ -16,7 +18,8 @@ lazy val commonSettings = Seq(
 )
 
 lazy val pathSettings = Seq(
-  resourceDirectory in Compile <<= baseDirectory / "src/main/resources"
+  resourceDirectory in Compile := baseDirectory.value / "src/main/resources",
+  resourceDirectory in Test := baseDirectory.value / "src/test/resources"
 )
 
 lazy val root = (project in file("."))
@@ -45,9 +48,30 @@ libraryDependencies ++= Seq(
     "mysql" % "mysql-connector-java" % "5.1.35"
 )
 
+
 //
 // Eclipse
 //
 
 // download available sources and java-docs and make them auto-accessible in Eclipse 
 EclipseKeys.withSource := true
+
+//The following example shows how to add the resources folders:
+EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Resource
+
+
+//
+// Assembly
+// 
+
+// run assembly task by `sbt assembly` in your console
+// execute generated jar with `java -jar path/to/file.jar`
+
+// For example the name of the jar can be set as follows in build.sbt:
+// assemblyJarName in assembly := "something.jar"
+
+// To skip the test during assembly,
+test in assembly := {}
+
+// To set an explicit main class,
+// mainClass in assembly := Some("controller.Application")

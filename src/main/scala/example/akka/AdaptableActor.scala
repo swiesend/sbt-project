@@ -9,7 +9,7 @@ case object BecomeNormal
  * Actors are useful to manage state. This example actor manages the
  * can change its behavior by adapting another receive function.
  */
-class BehaviorActor extends ActorBase {
+class AdaptableActor extends ActorBase {
 
   // Manage the actors lifecycle-hooks to change their
   // behavior when distinct events occur. 

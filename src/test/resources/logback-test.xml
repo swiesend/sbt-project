@@ -14,11 +14,11 @@
         </encoder>
     </appender>    
     
-    <logger name="akka" level="ERROR" />
-    <logger name="scala.slick" level="ERROR" />
-    <logger name="scala.slick.session" level="ERROR" />
+    <logger name="akka" level="DEBUG" />
+    <logger name="scala.slick" level="DEBUG" />
+    <logger name="scala.slick.session" level="DEBUG" />
     
-    <root level="ERROR">
+    <root level="DEBUG">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>

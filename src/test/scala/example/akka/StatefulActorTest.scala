@@ -5,9 +5,9 @@ import akka.actor.Status
 import akka.testkit.TestActorRef
 import akka.testkit.TestProbe
 import example.akka.WeekDay._
-import test.FunBaseActorTestKit
+import test.ActorTestKitFunBase
 
-class DatabaseActorTest extends FunBaseActorTestKit(ActorSystem("test-system")) {
+class WeekDayActorTest extends ActorTestKitFunBase(ActorSystem("test-system")) {
 
   val probe = TestProbe()
 
